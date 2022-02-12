@@ -145,17 +145,17 @@ const getSelectionAsMarkdown = async (options) => {
       }
     }
 
-    for (let img of container.getElementsByTagName("img")) {
-      if (
-        img.hasAttribute("src") &&
-        !img.getAttribute("src").startsWith("http")
-      ) {
-        img.setAttribute(
-          "src",
-          url.resolve(document.URL, img.getAttribute("src"))
-        );
-      }
-    }
+    // for (let img of container.getElementsByTagName("img")) {
+    //   if (
+    //     img.hasAttribute("src") &&
+    //     !img.getAttribute("src").startsWith("http")
+    //   ) {
+    //     img.setAttribute(
+    //       "src",
+    //       url.resolve(document.URL, img.getAttribute("src"))
+    //     );
+    //   }
+    // }
 
     if (options.embedImage) {
       turndownService.use(turndownPluginImgReferenceStyle);
